@@ -23,18 +23,15 @@ public class DocumentService {
 	MicroServiceEnseignantProxy me;
 
 	public void AjouterDocument(Document m) {
-
 		Document m1 = getDocumentByPath(m.getPath());
 		EnseignantResponse e = getEnsById(m.getEns());
 		MatiereResponse mat = getMatById(m.getMat());
 		m.setEns(e.getId());
 		m.setMat(mat.getId_mat());
 		docs.saveAndFlush(m);
-
 		throw new NoException("l'objet est ajouter avec sucée");
 
 	}
-	
 
 	public void supprimerDocument(int id) {
 

@@ -44,9 +44,20 @@ private List<MatiereResponse> lm;
 @JsonIgnore
 private List<DemandeTirageResponse> ld;
 @JsonIgnore
-private DepartementResponse dep;
-@JsonIgnore
 private List<DocumentResponse> ldoc;
+public EnseignantResponse(int id, String cin, String prenom, String nom, String adress, String email, String phone,
+		String login, String password) {
+	super();
+	this.id = id;
+	this.cin = cin;
+	this.prenom = prenom;
+	this.nom = nom;
+	this.adress = adress;
+	this.email = email;
+	this.phone = phone;
+	this.login = login;
+	this.password = password;
+}
 
 
 
